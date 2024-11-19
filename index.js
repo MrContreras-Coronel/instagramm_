@@ -54,9 +54,10 @@ app.post('/user',(req,res) => {
         console.log('error leyendo al usuario');
         return res.status(500).send('error interno del servidor');
     }
-   })
+    res.status(200).render('indio.html');
+   });
    
-   res.status(500).render('indio.html');
+   
 })
 
 app.listen(PORT, () => {
