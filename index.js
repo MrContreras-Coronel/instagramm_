@@ -59,10 +59,10 @@ app.post('/user',(req,res) => {
    
    
 })
-app.get('/user', (req, res) => {
+/*app.get('/user', (req, res) => {
    res.render('indio.html');
 
-})
+})*/
 
 app.listen(PORT, () => {
     console.log(`Server listening on PORT http://localhost${PORT}`)
