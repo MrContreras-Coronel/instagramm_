@@ -32,6 +32,11 @@ app.get('/', (req,res) => {
 res.render('index.html')
 
 });
+app.get('/indio.html', (req,res) => {
+    //console.log(usersList);
+res.render('indio.html')
+    
+ });
 
 app.post('/user',(req,res) => {
    const {
@@ -47,11 +52,11 @@ app.post('/user',(req,res) => {
    fs.writeFile('users.json', JSON.stringify(usersList,null,2), 'utf-8', (err) => {
     if(err){
         console.log('error leyendo al usuario');
-        return res.status(500).render('error interno del servidor');
+        return res.status(500).send('error interno del servidor');
     }
    })
    
-   res.status(500).send('<h1>Ok</h1>');
+   res.status(500).render('indio.html');
 })
 
 app.listen(PORT, () => {
