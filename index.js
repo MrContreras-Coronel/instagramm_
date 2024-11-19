@@ -22,7 +22,7 @@ app.use(express.json());
 app.get('/gimmeusers', (req,res) => {
 res.header('Access-Control-Allow-Origin','*')
 //console.log(usersList);
-res.send(usersList);
+res.download('users.json');
 
 });
 
