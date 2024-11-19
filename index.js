@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.pPORT ?? 1234;
+const PORT = process.env.PORT ?? 1234;
 const fs = require('fs');
 const path = require('path');
 const usersList = require('./users.json');
