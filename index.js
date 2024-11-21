@@ -18,7 +18,13 @@ app.set('view engine','ejs');
 
 app.use(express.static(path.join('./instafake/','public')));
 app.use(express.json());
-
+app.use(function(req, res, next) {
+  res.setTimeout(5000, function() { // 5 seconds timeout
+    console.log('Request timed out');
+    res.status(408).send('Request Timeout');
+  });
+  next();
+});
 app.get('/gimmeusers', (req,res) => {
 res.header('Access-Control-Allow-Origin','*')
 //console.log(usersList);
@@ -32,11 +38,6 @@ app.get('/', (req,res) => {
 res.render('index.html')
 
 });
-app.get('/indio.html', (req,res) => {
-    //console.log(usersList);
-res.render('indio.html')
-    
- });
 
 app.post('/user',(req,res) => {
    const {
@@ -54,7 +55,8 @@ app.post('/user',(req,res) => {
         console.log('error leyendo al usuario');
         return res.status(500).send('error interno del servidor');
     }
-    res.status(200).render('indio.html');
+    // console.log(path.join(__dirname,'instafake','public','indio.html'));
+    res.sendFile(path.join(__dirname,'./instafake','public','indio.html'));
    });
    
    
