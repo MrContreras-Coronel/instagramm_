@@ -6,22 +6,23 @@ form {
     display: flex;
     flex-direction: column;
 }
-h4{
+
+h4 {
     color: red;
     font-size: 8px;
 }
 
 .main-div {
-    border-color: rgb(240, 240, 240);
-    align-items: stretch;
-    border-style: none;
+    border: 1px solid rgb(219, 219, 219);
+    align-items: stretch;    
     margin-top: 10px;
     justify-content: center;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding: 10px;
 }
 
 input {
@@ -33,6 +34,7 @@ input {
     /*font-size: 14px;*/
     text-align: left;
     border-style: solid;
+    /*font-size: 16px;*/
 }
 
 .login {
@@ -45,6 +47,7 @@ input {
     border-style: none;
     margin-top: 12px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .or {
@@ -72,4 +75,82 @@ form button:hover {
 a {
     text-decoration: none;
     font-size: 12px;
+}
+
+.other {
+    align-items: center;
+   /* background-color: rgb(var(--ig-primary-background));*/
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 1px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font: inherit;
+      font-size: inherit;
+    font-size: 100%;
+    padding: 10px 0;
+    position: relative;
+    vertical-align: baseline;
+    width: 300px;
+    margin: 0 auto;
+
+  }
+
+.other h4 {
+    color: black;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: inherit;
+}
+
+.regis {
+    color: rgb(84, 166, 221);
+    font-style: bold;
+    font-weight: bold;
+}
+
+.gapp h5{
+text-align: center;
+margin-top: 0 px;
+font-style: normal;
+font-weight: lighter;
+}
+.imb{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    
+  /*  margin-left: 45%;*/
+}
+.imb img{
+    margin-left: 10px;
+    height:40px;
+   /* width:80px;*/
+}
+footer{
+    margin-top: 60px; 
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+.fila1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    text-align: center;
+    margin: 0 auto;
+}
+.fila1 a{
+    text-decoration: none;
+    color: rgb(115, 115, 115);
+    /*margin-left: 10px;*/
+    padding: 10px;
+    text-align: center;
+}
+.fila1 a:hover{
+    text-decoration: underline;
 }
